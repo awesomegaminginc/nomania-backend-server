@@ -18,5 +18,3 @@ app.listen(port, () => {
 });
 
 module.exports = app;
-
-//TODO: Set up Mongo

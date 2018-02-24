@@ -4,7 +4,7 @@
   "description": "a web server that handles storing accounts, cards, and other details for the nomania game",
   "main": "index.js",
   "engines": {
-    "node": "8.2.1"
+    "node": "7.0.0"
   },
   "scripts": {
     "start": "node server/server.js",

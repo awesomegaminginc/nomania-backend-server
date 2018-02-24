@@ -12,6 +12,10 @@ app.get('/', (req, res) => {
     console.log(`Recieved connection`);
 });
 
+app.get('/adminpanel', (req, res) => {
+    res.send(adminpanel.html);
+});
+
 app.listen(port, () => {
     console.log(`Started on port ${port}`);
 });

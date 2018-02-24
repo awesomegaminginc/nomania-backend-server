@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "node server/server.js",
-    "nodemon-watch": "nodemon server/server.js"  
+    "nodemon-watch": "nodemon server/server.js"
   },
   "author": "Manav Bokinala <manav.bokinala@gmail.com>",
   "license": "MIT",
@@ -23,6 +23,7 @@
     "lodash": "^4.17.5",
     "mongodb": "^3.0.2",
     "mongoose": "^5.0.6",
+    "mongoose-type-email": "^1.0.5",
     "validator": "^9.4.1"
   }
 }

@@ -2,6 +2,8 @@ const _ = require('lodash');
 const express = require('express');
 const bodyParser = require('body-parser');
 
+var {mongoose} = require('./db/mongoose');
+var {UserModel} = require('./models/user');
 var app = express();
 const port = process.env.PORT || 3000;
 
@@ -12,8 +14,19 @@ app.get('/', (req, res) => {
     console.log(`Recieved connection`);
 });
 
-app.get('/adminpanel', (req, res) => {
-    res.send(adminpanel.html);
+app.post('/users', (req, res) => {
+    var body = _.pick(req.body, ['name']);
+    var User = new UserModel(body);
+
+    User.save((err) => {
+        if (err) {
+            console.log(err);
+            return;
+        } else {
+            res.send(User);
+            console.log('added user');
+        }
+    });
 });
 
 app.listen(port, () => {

@@ -10,7 +10,7 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
-    res.send('<h3>Welcome the Nomania Webserver</h3>');
+    res.send('<h3>Hello Aditya</h3>');
     console.log(`Recieved connection`);
 });
 
